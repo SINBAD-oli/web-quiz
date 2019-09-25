@@ -1,0 +1,70 @@
+Student Login
+	-Login to student
+	-navigate to student page
+	
+Teacher Login	
+	-Login to teacher
+	-navigate to teacher page
+	
+Student Page
+	-Take an exam
+	-See grades
+=============================================================================
+
+See grades
+	-*retrieve available released graded exams
+		-send to user entire exam
+	
+Teacher Page
+	-Submit questions
+	-Create an exam
+	-Release Grades
+	
+
+
+		
+
+		
+		
+		
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=================================================================	
+	
+Take exam	
+	-*retrieve available exams to take
+		-send to user
+	-*listen for selected exam
+		-retrieve selected exam
+			-send to user
+	-*store submitted exam
+		-echo submitted
+	
+Release Grades
+	-*Retrieve releaseable exams (Exams that werent released yet)
+	-*Listen for selected exam to releaseable
+		-updae availability to yes
+		-released
+		
+Submit questions to question database
+	-*Listen to created questions and username
+		-store questions to the premade table
+		-successfully created 
+		
+Create an exam with created questions
+	-*Listen to created questions and username
+		-make table for exam
+		-store questions to the table
+		-store questions to the premade table
+		-send exam to all students in student username table
+		-successfully created
+
+Create an exam with premade
+	-*Retrieve premade questions
+		-send to user
+	-*Listen to selection
+		-retrieve questions via ID from database
+		-create table for exam
+		-store the questions to exam table
+		-send exam to all students in student username table
+		-successfully created
+		

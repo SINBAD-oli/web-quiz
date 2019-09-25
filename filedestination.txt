@@ -1,0 +1,105 @@
+Needed Curl scripts
+
+to the following destinations
+
+================================================================|
+CREATE AN EXAM																														|
+================================================================|
+create_testtable																														|
+	-Professor presses make an exam and is navigated to a page asking to name the exam	|
+	-When press submit. The examname and username is sent												|
+																																				|
+	-> CS490/beta/Back/createexam_premade/create_testtable.php										|
+																																				|
+get_premade																															|
+	-professor is displayed a list of checkboxes based on how many questions are in the 		|
+	-premade table																													|
+																																				|
+	->CS490/beta/Back/createexam_premade/get_premade.php											|
+																																				|
+store_questions																														|
+	-on checkbox click the selected questions' id is send to be stored in the exam table			|
+																																				|
+	->CS490/beta/Back/createexam_premade/store_questions.php										|
+																																				|
+closeexam.php																														|
+	-on checkbox click the user is navigated to the homepage and the temp exam is deleted	|
+																																				|
+	->CS490/beta/Back/createexam_premade/closeexam.php													|
+																																				|
+================================================================|
+
+
+================================================================|
+TAKE AN EXAM																															|
+================================================================|
+takeable_exams																														|
+	-On click of Take an exam the student is displayed all available exams they can take in 	|
+																																				|
+	-> CS490/beta/Back/takeexam/takeable_exams.php															|
+																																				|
+send_takingexam.php																												|
+	-On selection the student is redirected to the exam page where all the questions are		|
+																																				|
+	->CS490/beta/Back/takeexam/send_takingexam.php														|
+																																				|
+get_cases																																|
+	-sends the needed cases for the taking exam by table														|
+	-input is 	|username|examid|examname|professor															|
+	-output is |0|1|2|3 																												|
+	-|0| = |casestringforQ1|																										|
+	-|1| = |casestringforQ2|																										|
+																																				|
+	->CS490/beta/Back/takeexam/get_cases.php																	|
+																																				|
+updategrade.php																													|
+	-Updates the grade on student's table																				|
+	-input is |examid|examname|professor|username|grade													|
+																																				|
+	->CS490/beta/Back/takeexam/updategrade.php																|
+																																				|
+================================================================|
+
+
+================================================================|
+RELEASE EXAM																															|
+================================================================|
+release_able_exams.php																										|
+	-displays the list of exams they are able to release the grades of										|
+																																				|
+	->CS490/beta/Back/releaseexam/release_able_exams.php												|
+																																				|
+releasegrades.php																													|
+	-On submission of chosen release list the grades are made available to the students		|
+																																				|
+	->CS490/beta/Back/releaseexam/releasegrades.php															|
+================================================================|
+	
+	
+	
+================================================================|
+SEE GRADES																															|
+================================================================|
+seeable_exams.php																												|
+	-displays a list of the exam grades available																		|
+																																				|
+	->CS490/beta/Back/seegrades/seeable_exams.php															|
+																																				|
+show_grades.php																													|
+	-displays the grade of the chosen exam																				|
+																																				|
+	->CS490/beta/Back/seegrades/show_grades.php																|
+================================================================|
+
+
+================================================================|
+SUBMIT QUESTIONS FOR DB																									|
+================================================================|
+																																				|
+createquestionsfordb.php																										|
+	-creates the questions and sends to the database															|
+																																				|
+	->CS490/beta/Back/submitquestions/createquestionsfordb.php										|
+================================================================|
+	
+	

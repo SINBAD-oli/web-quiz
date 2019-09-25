@@ -1,0 +1,218 @@
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+get_premade
+	-displays all the questions in the premade database
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/createexam_premade/get_premade.php	
+	
+	
+	
+	input = none
+_____________________________________________________________________________	
+	output
+	
+	multidimensdional array
+	| 0 | 1 | 2 | 3 | 4 | . . . |
+	
+	| 0 | = | id | question | category | level | cases |
+	| 1 | = | id | question | category | level | cases |
+	| 2 | = | id | question | category | level | cases |
+	| . . . |
+	
+=====================================================================
+=====================================================================
+create_exam_p
+	-creates an exam for the teacher
+	
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/createexam_premade/create_exam_p.php
+	
+	
+	
+	input
+	multidimensdional array
+	| 0 | 1 | 2 | 3 | 4 |
+	
+	| 0 | = | username  | examname |
+	| 1 | = | questionid |
+	| 2 | = | questionid |
+	| 3 | = | questionid | 
+	| 4 | = | questionid | 
+
+	output
+	array
+	| response | = "created"
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+release_able_exams
+	-searches teacher's table and displays releaseable exams
+	
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/takeexam/takeable_exams.php	
+	
+	
+	input
+	array
+	| username | = of teacher
+	
+	output 
+	multidimensdional array
+	| 0 | 1 | 2 | 3 | . . . |
+	
+
+	| 0 | = | examid | examname | 
+	| 1 | = | examid | examname | 
+	| . . . | = | examid | examname |
+=====================================================================
+=====================================================================
+releasegrades
+	-releases the students grade
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/releaseexam/releasegrades.php	
+	
+	
+	
+	input 
+	multidimensdional array
+	| 0 | 1 | 2 | . . . |
+	
+	| 0 | = | username | = of teacher
+	| 1 | = | examid | examname | 
+	| 2 | = | examid | examname | 
+	| . . . | = | examid | examname | 
+	
+	output
+	array
+	
+	| response | = released
+
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+createquestionsfordb
+	-sends quetions to the premade table
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/submitquestions/createquestionsfordb.php		
+	
+	
+	
+	input
+	array
+	| question | category | level | cases | 
+	
+	output
+	array
+	| response | = created
+
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+takeable-exams
+	-Will list all available exams they can take to the student
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/takeexam/takeable_exams.php	
+	
+	
+	
+	input
+		array	
+		| username | = of student
+_____________________________________________________________________________
+	output
+		Multi dimensional array
+		| 0 | 1 | 2 | 3 |
+		
+		| 0 | = | response | 										=> response is either yes or none: yes = there are some : none = there are none available
+		| 1 | = | examid | examname | professor |
+		| 2 | = | examid | examname | professor |
+		| 3 | = | examid | examname | professor |
+		
+		OR when none
+		
+		| 0 | = | response | = none
+		
+		
+=====================================================================
+=====================================================================
+
+send_takingexam
+	-Will send the exam information and exam questions to take for the student
+	
+	
+	https://web.njit.edu/~mmd38/CS490/rc/Back/takeexam/send_takingexam.php	
+	
+	
+	input
+		multidimensdional array
+		| 0 | 1 |			ONLY SIZE 2
+		
+		| 0 | = | username | = of student
+		| 1 | = | examid | examname | professor |      SELECTED EXAM TO TAKE
+_____________________________________________________________________________
+	output
+		multidimensdional array
+		| 0 | 1 | 2 | 3 | 4 | 5 |
+		
+		| 0 | = | username  |
+		| 1 | = | examid | examname | professor | 
+		| 2 | = | questionid | question | 
+		| 3 | = | questionid | question | 
+		| 4 | = | questionid | question |
+		| 5 | = | questionid | question | 
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================
+grading_middle.php
+				-After student presses submit, it gets sent to be graded in middle
+				-Will store the submitted exam thats graded by the middle end
+				-this is what shivam needs to send to back
+				
+				
+				input
+					multidimensional array
+					| 0 | 1 | 2 | 3 | 4 |
+					
+					| 0 | = | username | of student
+					| 1 | = | examid | examname | professor |
+					| 2 | = | questionid | code | 
+					| 3 | = | questionid | code |
+					| . . . | = | questionid | code |
+					
+
+=====================================================================
+=====================================================================	
+submit_exam
+
+https://web.njit.edu/~mmd38/CS490/rc/middle/takeexam/submit_exam.php
+https://web.njit.edu/~mmd38/CS490/rc/Back/takeexam/submit_exam.php
+
+
+	
+	input
+		multidimensdional array
+		| 0 | 1 | 2 | 3 | 4 | 5 |
+		
+		| 0 | = | username |
+		| 1 | = | examid | examname | professor | grade |
+		| 2 | = | questionid | question | caseshit | casesmissed | submitted | 
+		| 3 | = | questionid | question | caseshit | casesmissed | submitted | 
+		| 4 | = | questionid | question | caseshit | casesmissed | submitted | 
+		| 5 | = | questionid | question | caseshit | casesmissed | submitted | 
+		
+	
+_____________________________________________________________________________
+	output
+		array
+		| response | = submitted
+		
+=====================================================================
+=====================================================================
+=====================================================================
+=====================================================================		
